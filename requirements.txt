@@ -12,3 +12,4 @@ Cython==0.15.1
 -e git://github.com/schmir/gevent.git@452536b179cdbe70e7200d200487edf2834f7ddc#egg=gevent-dev
 greenlet==0.3.4
 gstatsd==0.4
+simplejson==2.5.2
