@@ -1,7 +1,7 @@
 #!/bin/bash
 # You should run this script as ROOT
 
-PROJECT_NAME="pygraphite"
+PROJECT_NAME="monitor"
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 apt-get install -q -y $(< apt-requirements.txt)
@@ -51,4 +51,4 @@ fi
 mkdir -p /opt/var/log /opt/var/pid /opt/graphite
 chown www-data:www-data /opt/var /opt/var/log /opt/var/pid /opt/var/pid
 
-# mkvirtualenv -r /opt/pygraphite/requirements.txt pygraphite
+# mkvirtualenv -r /opt/monitor/requirements.txt monitor

@@ -3,5 +3,5 @@ Install
 
     sudo ./install.sh
     sudo chown -R <YOUR USER> /opt/graphite
-    workon pygraphite
+    workon monitor
     ./post-install.sh
