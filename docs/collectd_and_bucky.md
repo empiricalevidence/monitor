@@ -58,6 +58,7 @@ Now in your Graphite url you can show the new graphs.
 
 NOTE:
 -----
+
 Collectd problem with perl modules
 
     http://mailman.verplant.org/pipermail/collectd/2008-March/001616.html
