@@ -146,7 +146,6 @@ DATABASES = {
         'TEST_CHARSET': 'utf8',
         }
     }
-
 # Users still on Django 1.1 must use the old method instead:
 #DATABASE_ENGINE = 'django.db.backends.mysql'
 #DATABASE_NAME = 'graphite'      # Or path to the database file if using sqlite3

@@ -1,1 +1,2 @@
 python-cairo-dev
+collectd-core

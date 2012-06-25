@@ -13,3 +13,4 @@ Cython==0.15.1
 greenlet==0.3.4
 gstatsd==0.4
 simplejson==2.5.2
+bucky==0.2.0
