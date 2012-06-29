@@ -19,6 +19,8 @@ To run or stop collectd:
 Bucky
 =====
 
+ln -s -f
+
 Url of Bucky documentation:
 
     http://pypi.python.org/pypi/bucky
