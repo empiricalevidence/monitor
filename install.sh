@@ -38,8 +38,8 @@ if [[ ! -f "${SCRIPT_DIR}/requirements.txt" ]]; then
         pip install -r "${SCRIPT_DIR}/requirements.txt"
 fi
 
-ln -s /opt/monitor/etc/graphite/{carbon.conf,storage-schemas.conf,storage-aggregation.conf} /opt/graphite/conf/
-ln -s /opt/monitor/etc/graphite/local_settings.py /opt/graphite/webapp/graphite/
+ln -s -f  "${SCRIPT_DIR}/etc/graphite/"*.conf /opt/graphite/conf
+ln -s "${SCRIPT_DIR}/etc/graphite/local_settings.py" /opt/graphite/webapp/graphite/
 
 # Installs the projects' collectd config, if it has any
 if [[ -d /etc/collectd && -f "${SCRIPT_DIR}/etc/collectd.conf" ]]; then
@@ -70,13 +70,4 @@ sudo supervisorctl -c /etc/supervisor/supervisord.conf restart "${PROJECT_NAME}"
 # Installs the projects' crontab, if it has any
 if [[ -d /etc/cron.d && -f "${SCRIPT_DIR}/etc/crontab" ]]; then
 	sudo ln -s "${SCRIPT_DIR}/etc/crontab" "/etc/cron.d/${PROJECT_NAME}-crontab"
-fi
-
-# Install the Microsoft Windows Vista fonts
-if [ ! -d /usr/share/fonts/vista ]; then
-	wget http://cuenca-stuff.s3.amazonaws.com/install/vista-fonts.zip
-	sudo unzip vista-fonts.zip -d /usr/share/fonts
-	sudo mv /usr/share/fonts/Fonts /usr/share/fonts/vista
-	rm vista-fonts.zip
-	sudo fc-cache -vf
 fi
