@@ -38,7 +38,7 @@ if [[ ! -f "${SCRIPT_DIR}/requirements.txt" ]]; then
         pip install -r "${SCRIPT_DIR}/requirements.txt"
 fi
 
-ln -s /opt/monitor/etc/graphite/{carbon.conf,storage-schemas.conf} /opt/graphite/conf/
+ln -s /opt/monitor/etc/graphite/{carbon.conf,storage-schemas.conf,storage-aggregation.conf} /opt/graphite/conf/
 ln -s /opt/monitor/etc/graphite/local_settings.py /opt/graphite/webapp/graphite/
 
 # Installs the projects' collectd config, if it has any
