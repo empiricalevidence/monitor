@@ -30,12 +30,11 @@ sudo mkdir -p /opt/var/log /opt/var/pid /opt/graphite /opt/envs
 sudo chown "$USER":"$GROUP" /opt/var /opt/var/log /opt/var/pid /opt/var/pid /opt/graphite /opt/envs
 
 if [[ ! -d "/opt/envs/${PROJECT_NAME}" ]]; then
-        virtualenv --distribute "/opt/envs/${PROJECT_NAME}"
+    virtualenv --distribute "/opt/envs/${PROJECT_NAME}"
 fi
-source "/opt/envs/${PROJECT_NAME}/bin/active"
 
-if [[ ! -f "${SCRIPT_DIR}/requirements.txt" ]]; then
-        pip install -r "${SCRIPT_DIR}/requirements.txt"
+if [[ -f "${SCRIPT_DIR}/requirements.txt" ]]; then
+    pip install -r "${SCRIPT_DIR}/requirements.txt" -E "/opt/envs/${PROJECT_NAME}"
 fi
 
 ln -s -f  "${SCRIPT_DIR}/etc/graphite/"*.conf /opt/graphite/conf
@@ -44,7 +43,7 @@ ln -s "${SCRIPT_DIR}/etc/graphite/local_settings.py" /opt/graphite/webapp/graphi
 # Installs the projects' collectd config, if it has any
 if [[ -d /etc/collectd && -f "${SCRIPT_DIR}/etc/collectd.conf" ]]; then
 	sudo ln -sf "${SCRIPT_DIR}/etc/collectd.conf" "/etc/collectd/collectd.conf"
-        sudo /etc/init.d/collectd restart
+    sudo /etc/init.d/collectd restart
 fi
 
 echo "Enter the MySQL password of root"
