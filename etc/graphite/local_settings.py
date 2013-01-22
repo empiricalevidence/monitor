@@ -137,8 +137,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # pylint: disable=E0602
         'NAME': 'graphite',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'writer',
+        'PASSWORD': '3EFG0g5si1eSHEyklC7d',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {'init_command': 'SET storage_engine=INNODB'},
