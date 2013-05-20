@@ -1,0 +1,31 @@
+title       "RAM Usage (in percent)"
+area        :stacked
+description "RAM usage (in percent)"
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+
+field :use,    :color => "red",
+               :alias => "used by application",
+               :data  => "asPercent(diffSeries(collectd.eu4_thumbr_it.memory.memory-used.value,collectd.eu4_thumbr_it.memory.cached,collectd.eu4_thumbr_it.memory.memory-buffered.value),sumSeries(collectd.eu4_thumbr_it.memory.memory-used.value, collectd.eu4_thumbr_it.memory.memory-free.value))"
+
+
+field :buffer, :color => "orange",
+               :alias => "buffer",
+               :data  => "asPercent(collectd.eu4_thumbr_it.memory.memory-buffered.value,sumSeries(collectd.eu4_thumbr_it.memory.memory-used.value, collectd.eu4_thumbr_it.memory.memory-free.value))"
+
+
+field :cache,  :color => "yellow",
+               :alias => "cache",
+               :data  => "asPercent(collectd.eu4_thumbr_it.memory.memory-cached.value,sumSeries(collectd.eu4_thumbr_it.memory.memory-used.value, collectd.eu4_thumbr_it.memory.memory-free.value)"
+
+
+field :free,   :color => "green",
+               :alias => "free",
+               :data  => "asPercent(collectd.eu4_thumbr_it.memory.memory-free.value,sumSeries(collectd.eu4_thumbr_it.memory.memory-used.value, collectd.eu4_thumbr_it.memory.memory-free.value))"
+
+

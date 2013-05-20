@@ -1,0 +1,20 @@
+title       "Load"
+area        :none
+description "The combined CPU usage for node"
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+linewidth 1
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+
+field :short, :color => "red",
+               :alias => "Short term (1 minute)",
+               :data  => "collectd.eu4_thumbr_it.load.load.shortterm"
+
+field :mid, :color => "orange",
+               :alias => "Mid term (5 minutes)",
+               :data  => "collectd.eu4_thumbr_it.load.load.midterm"
+

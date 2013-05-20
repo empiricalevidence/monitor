@@ -1,0 +1,18 @@
+title   "Traffic on eth0 (bytes/s)"
+area    :first
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+
+field :receiving, :color => "green",
+               :alias => "Receiving",
+               :data  => "collectd.eu4_thumbr_it.interface-eth0.if_octets.rx"
+
+field :transmitting, :color => "blue",
+               :alias => "Transmiting",
+               :data  => "collectd.eu4_thumbr_it.interface-eth0.if_octets.tx"
+

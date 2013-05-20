@@ -1,0 +1,20 @@
+title       "Disk time (in ms)"
+area        :none
+description "Time ellapsed to read or write on a disk"
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+linewidth 1
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+
+field :sda1read, :color => "yellow",
+               :alias => "sda1 read",
+               :data  => "collectd.eu4_thumbr_it.disk-sda1.disk_time.read"
+
+field :sda1write, :color => "red",
+               :alias => "sda1 write",
+               :data  => "collectd.eu4_thumbr_it.disk-sda1.disk_time.write"
+

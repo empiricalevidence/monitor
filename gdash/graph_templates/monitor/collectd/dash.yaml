@@ -1,0 +1,5 @@
+:name: System for eu4.thumbr.it
+:description: The cpu, load and usage for eu4.thumbr.it
+:include_properties:
+ - "common.yaml"
+ - "white-theme.yaml"

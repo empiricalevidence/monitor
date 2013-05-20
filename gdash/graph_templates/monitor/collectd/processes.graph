@@ -1,0 +1,36 @@
+title       "Processes"
+vtitle      "Number of processes"
+area        :stacked
+description "Number of processes for node"
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+
+field :paging, :color => "purple",
+             :alias => "paging",
+             :data  => "collectd.eu4_thumbr_it.processes.ps_state-paging.value"
+
+field :zombie,  :color => "white",
+             :alias => "zombies",
+             :data  => "collectd.eu4_thumbr_it.processes.ps_state-zombie.value"
+
+field :uninterruptible,  :color => "orange",
+             :alias => "uninteruptible",
+             :data  => "collectd.eu4_thumbr_it.processes.ps_state-blocked.value"
+
+field :dead,  :color => "red",
+             :alias => "dead",
+             :data  => "collectd.eu4_thumbr_it.processes.ps_state-stopped.value"
+
+field :sleeping,  :color => "blue",
+             :alias => "sleeping",
+             :data  => "collectd.eu4_thumbr_it.processes.ps_state-sleeping.value"
+
+field :runnable,  :color => "green",
+             :alias => "runnable",
+             :data  => "collectd.eu4_thumbr_it.processes.ps_state-running.value"
+

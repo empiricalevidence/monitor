@@ -1,0 +1,12 @@
+title   "Uptime"
+area    :all
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+
+field :uptime,   :alias => "Uptime",
+                  :data  => "scale(collectd.eu4_thumbr_it.uptime.uptime.value,0.000011574)"

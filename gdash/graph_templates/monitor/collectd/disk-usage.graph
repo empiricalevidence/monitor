@@ -1,0 +1,17 @@
+title       "Disk Usage (in percent)"
+area        :none
+description "Disk usage (in percent)"
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+linewidth 1
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+
+
+field :opt, :color => "red",
+               :alias => "/",
+               :data  => "asPercent(collectd.eu4_thumbr_it.df-root.df_complex-used.value,sumSeries(collectd.eu4_thumbr_it.df-root.df_complex-used.value, collectd.eu4_thumbr_it.df-root.df_complex-free.value))"
+

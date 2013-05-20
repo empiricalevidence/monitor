@@ -1,0 +1,9 @@
+:graph_properties:
+ :background_color: "#FFFFFF"
+ :foreground_color: "#333333"
+ :vertical_mark_color: "#330000"
+ :font_name: "DroidSans"
+ :line_mode: "connected"
+ :thickness: 1
+ :major_grid_line_color: "#ADADAD"
+ :minor_grid_line_color: "#E5E5E5"

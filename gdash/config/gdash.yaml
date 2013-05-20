@@ -1,0 +1,30 @@
+:graphite: http://dashboard.empirical-evidence.com
+:templatedir: graph_templates
+:username: e98cuenc
+:password: ykXvnRHquRG4BBLX
+:options:
+  :title: Thumbrit
+  :prefix: ""
+  :refresh_rate: 60
+  :graph_columns: 2
+  :graph_width: 500
+  :graph_height: 250
+  :interval_filters:
+    - :label: Last Hour
+      :from: -1hour
+      :to: now
+    - :label: Last Day
+      :from: -1day
+    - :label: Last Week
+      :from: -1week
+    - :label: Last Month
+      :from: -1month
+    - :label: Last Year
+      :from: -1year
+  :intervals:
+    - [ "-1hour", "1 hour" ]
+    - [ "-2hour", "2 hour" ]
+    - [ "-1day", "1 day" ]
+    - [ "-1week", "1 week" ]
+    - [ "-1month", "1 month" ]
+    - [ "-1year", "1 year" ]

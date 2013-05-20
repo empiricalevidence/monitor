@@ -1,0 +1,14 @@
+title   "Entropy"
+area    :all
+hide_legend false
+
+timezone    "Europe/Madrid"
+background_color "white"
+foreground_color "#333333"
+major_grid_line_color "#ADADAD"
+minor_grid_line_color "#E5E5E5"
+ymin 0
+
+field :entropy,   :alias => "Entropy",
+                  :data  => "collectd.eu4_thumbr_it.entropy.entropy.value"
+
