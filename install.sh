@@ -16,7 +16,7 @@ if [[ ! -f /usr/lib/libjpeg.so ]]; then
 fi
 
 sudo mkdir -p /opt/var/log/monitor /opt/var/pid /opt/graphite /opt/envs
-sudo chown "$USER":"$GROUP" /opt/var /opt/var/log /opt/var/log/monitor /opt/var/pid /opt/var/pid /opt/graphite /opt/envs
+sudo chown "$USER":"$GROUP" /opt/var /opt/var/log /opt/var/log/monitor /opt/var/pid /opt/graphite /opt/envs
 groupadd collectd
 
 if [[ ! -d "/opt/envs/${PROJECT_NAME}" ]]; then
