@@ -1,4 +1,4 @@
-Twisted==12.0.0
+Twisted==20.3.0
 pycairo==1.8.8
 txAMQP==0.6.1
 whisper==0.9.9
